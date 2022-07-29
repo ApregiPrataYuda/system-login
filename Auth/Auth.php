@@ -136,45 +136,82 @@ class User_m extends CI_model
 //viewss nama-file(Login.php)
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
   <title>Login</title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="<?=base_url()?>assets/backend/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?=base_url()?>assets/backend/bower_components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?=base_url()?>assets/backend/dist/css/AdminLTE.min.css">
+
+  <!-- Custom fonts for this template-->
+  <link href="<?= base_url() ?>assets/backend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="<?= base_url() ?>assets/backend/css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
-<body class="hold-transition login-page bg-purple">
-<div class="login-box">
-  <div class="login-logo">
-    <a href=""><b>Login-</b>system</a>
-  </div>
-  <div class="login-box-body">
-    <p class="login-box-msg">lakukan login terlebih dahulu</p>
-    <?php $this->load->view('flash_messages');?>
-    <form action="<?=site_url('Auth/proses')?>" method="post">
-    <div class="form-group has-feedback">
-        <input type="text" name="username" class="form-control" placeholder="username" required autofocus>
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-    </div>
-    <div class="form-group has-feedback">
-        <input type="password" name="password" class="form-control" placeholder="Password" required>
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-    </div>
-      <div class="row">
-        <div class="col-xs-8"></div>
-        <div class="col-xs-4">
-          <button type="submit" name="login" class="btn btn-primary btn-block btn-sm">Sign In</button>
+
+<body class="bg-gradient-success">
+
+  <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6"><img src="<?= base_url() ?>assets/backend/img/inventory.png" alt=""></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">selamat Datang Inventory App!</h1>
+
+                  </div>
+                  <form action="<?= site_url('Auth/process') ?>" method="POST">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="Enter username Address..." required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-user" name="password" id="password" placeholder="Password" required>
+                    </div>
+
+                    <button type="submit" name="login" class="btn btn-outline-success btn-block btn-sm">Sign In</button>
+                  </form>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
-    </form>
+
+    </div>
+
   </div>
- </div>
-<script src="<?=base_url()?>assets/backend/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="<?=base_url()?>assets/backend/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="<?= base_url() ?>assets/backend/vendor/jquery/jquery.min.js"></script>
+  <script src="<?= base_url() ?>assets/backend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="<?= base_url() ?>assets/backend/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="<?= base_url() ?>assets/backend/js/sb-admin-2.min.js"></script>
+
 </body>
+
 </html>
 
 
